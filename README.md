@@ -15,9 +15,7 @@ No seu controller crie uma instância de DanzorPrintViewr passando o path onde e
 ```
 public ActionResult Danfe()
 {
-    var path = HttpContext.Server.MapPath(<<caminho do arquivo>>);
-    DanzorPrintViewer model = new DanzorPrintViewer(path);
-    
+    var model = new DanzorPrintViewer(<<caminho do arquivo>>);
     return View("~/Views/Danfe/Danfe.cshtml", model);
 }
 ```
