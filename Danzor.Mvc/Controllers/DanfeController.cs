@@ -18,7 +18,7 @@ namespace Danzor.Mvc.Controllers
 
         public ActionResult Danfe()
         {
-            string path = HttpContext.Server.MapPath("~/Content/NFe28090708060730000190550020000001762000007303procNFe.xml");
+            string path = HttpContext.Server.MapPath("~/Content/23141206626253012400550090000882291882290004-NPROT123140069357106procNFe.xml");
             DanzorPrintViewer model = new DanzorPrintViewer(path);
 
             return View("~/Views/Danfe/Danfe.cshtml", model);

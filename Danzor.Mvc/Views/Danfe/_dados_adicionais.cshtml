@@ -1,4 +1,4 @@
-﻿@model Danzor.Print.DanzorFooter
+﻿@model Danzor.Print.DanzorPage
 
 <section class="bloco rodape">
    <table id="dados_adicionais">
@@ -13,12 +13,12 @@
       <tr>
          <td class="campo dados-adicionais">
             <div class="conteudo">
-               @Model.infAdic.infCpl.Value
+               @Model.Footer.infAdic.infCpl.Value
             </div>
          </td>
          <td class="campo reservado-fisco">
             <div class="conteudo">
-               @Model.infAdic.infAdFisco.Value
+               @Model.Footer.infAdic.infAdFisco.Value
             </div>
          </td>
       </tr>

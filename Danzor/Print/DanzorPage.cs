@@ -34,8 +34,8 @@ namespace Danzor.Print
             this.size = size;
 
             this.Header = new DanzorHeader(nfe);
-            this.Body = new DanzorBody(nfe, protNFe, page, size);
-            this.Footer = new DanzorFooter(nfe);
+            this.Body = new DanzorBody(nfe, page, size);
+            this.Footer = new DanzorFooter(nfe, protNFe);
         }
     }
 }

@@ -162,6 +162,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\23141206626253012400550090000882291882290004-NPROT123140069357106procNFe.xml" />
     <Content Include="Content\css\danfe\danfe.css">
       <DependentUpon>danfe.less</DependentUpon>
     </Content>

@@ -9,6 +9,8 @@ namespace Danzor.Print
 {
     internal class DanzorPrintManager
     {
+        public static int ITEM_PER_PAGE = 15;
+
         private dynamic nfe;
         private dynamic protNFe;
 
@@ -25,20 +27,17 @@ namespace Danzor.Print
 
         private IEnumerable<DanzorPage> ApportionPages()
         {
-            var totalPages = TotalPageSize();
-            for (int i = 1; i <= totalPages; i++)
-                yield return new DanzorPage(this.nfe, this.protNFe, i, totalPages);
+            var pageSize = PageSize();
+            for (int i = 1; i <= PageSize(); i++)
+                yield return new DanzorPage(this.nfe, this.protNFe, i, pageSize);
         }
 
-        private int TotalPageSize()
+        private int PageSize()
         {
-            var pages = Rating();
+            var items = (double)this.nfe.infNFe.det.Count;
+            var pages = Convert.ToInt32(Math.Ceiling(items / ITEM_PER_PAGE));
+
             return pages < 1 ? 1 : pages;
-        }
-
-        private int Rating()
-        {
-            return this.nfe.infNFe.det.Count / 10;
         }
     }
 }

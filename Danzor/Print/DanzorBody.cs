@@ -12,30 +12,23 @@ namespace Danzor.Print
         public int size { get; set; }
 
         public dynamic nfe { get; set; }
-        public dynamic ide { get; set; }
-        public dynamic emit { get; set; }
-        public dynamic dest { get; set; }
         public dynamic det { get; set; }
-        public dynamic total { get; set; }
-        public dynamic transp { get; set; }
-        public dynamic cobr { get; set; }
-        public dynamic protNFe { get; set; }
 
-        public DanzorBody(dynamic nfe, dynamic protNFe, int page, int size)
+        public DanzorBody(dynamic nfe, int page, int size)
         {
             this.page = page;
             this.size = size;
 
             this.nfe = nfe;
-            this.ide = this.nfe.infNFe.ide;
-            this.emit = this.nfe.infNFe.emit;
-            this.dest = this.nfe.infNFe.dest;
-            this.total = this.nfe.infNFe.total;
-            this.transp = this.nfe.infNFe.transp;
-            this.cobr = this.nfe.infNFe.cobr;
-            this.protNFe = protNFe;
+            GetDetItens(page - 1);
+        }
 
-            this.det = ((List<DanzorDynamicXml>)this.nfe.infNFe.det).Skip(page - 1).Take(10);
+        private void GetDetItens(int page)
+        {
+            var items = (List<DanzorDynamicXml>)this.nfe.infNFe.det;
+            var skippages = page * DanzorPrintManager.ITEM_PER_PAGE;
+
+            this.det = items.Skip(skippages).Take(DanzorPrintManager.ITEM_PER_PAGE);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model Danzor.Print.DanzorBody
+﻿@model Danzor.Print.DanzorPage
 
 <section class="bloco">
    <div class="conteudo negrito fonte-7-pontos">TRANSPORTADOR / VOLUMES TRANSPORTADOS</div>
@@ -17,7 +17,7 @@
             </div>
             <div class="conteudo duas-coluna centralizado negrito">
                <span class="caixa">
-                  @Model.transp.modFrete.Value
+                  @Model.Header.transp.modFrete.Value
                </span>
             </div>
          </td>
@@ -67,13 +67,13 @@
          <td class="campo especie-transportador">
             <div class="conteudo fonte-5-pontos">ESPÉCIE</div>
             <div class="conteudo">
-               @Model.transp.vol.esp.Value
+               @Model.Header.transp.vol.esp.Value
             </div>
          </td>
          <td class="campo marca-transportador">
             <div class="conteudo fonte-5-pontos">MARCA</div>
             <div class="conteudo">
-               @Model.transp.vol.marca.Value
+               @Model.Header.transp.vol.marca.Value
             </div>
          </td>
          <td class="campo numero-transportador">
@@ -85,13 +85,13 @@
          <td class="campo peso-bruto-transportador">
             <div class="conteudo fonte-5-pontos">PESO BRUTO</div>
             <div class="conteudo">
-               @Model.transp.vol.pesoB.Value
+               @Model.Header.transp.vol.pesoB.Value
             </div>
          </td>
          <td class="campo peso-liquido-transportador">
             <div class="conteudo fonte-5-pontos">PESO LÍQUIDO</div>
             <div class="conteudo">
-               @Model.transp.vol.pesoL.Value
+               @Model.Header.transp.vol.pesoL.Value
             </div>
          </td>
       </tr>
