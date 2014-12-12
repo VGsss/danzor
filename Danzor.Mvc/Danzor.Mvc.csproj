@@ -215,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -252,7 +253,6 @@
     <Content Include="Views\Danfe\_faturas.cshtml" />
     <Content Include="Views\Danfe\_imposto.cshtml" />
     <Content Include="Views\Danfe\_transportador.cshtml" />
-    <None Include="Properties\PublishProfiles\danzor.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Danzor\Danzor.csproj">
