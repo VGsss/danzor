@@ -12,13 +12,6 @@ namespace Danzor
         private XElement element;
         private Dictionary<string, object> dictionary;
 
-        public bool IsNull
-        {
-            get
-            {
-                return element.IsNull();
-            }
-        }
         public string Value
         {
             get
@@ -93,7 +86,12 @@ namespace Danzor
             object result;
 
             if (nodes.IsEmpty())
-                result = new DanzorDynamicXml();
+            {
+                if (collections.Contains(binder.Name))
+                    result = new List<DanzorDynamicXml>();
+                else
+                    result = new DanzorDynamicXml();
+            }
             else if (collections.Contains(binder.Name))
                 result = nodes.Select(n => new DanzorDynamicXml(n)).ToList();
             else
