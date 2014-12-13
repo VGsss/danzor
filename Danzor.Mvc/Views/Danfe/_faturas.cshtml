@@ -7,22 +7,25 @@
          <td>
             <table class="sem-bordas">
                <tr>
-                  @foreach (var duplicata in @Model.Header.cobr.dup)
+                  @if (!@Model.Header.cobr.dup.IsNull)
                   {
-                     <td class="campo sem-bordas">
-                        <div class="conteudo tres-colunas">
-                           <div class="conteudo fonte-5-pontos">NÚMERO</div>
-                           <div class="conteudo fonte-7-pontos">@duplicata.nDup.Value</div>
-                        </div>
-                        <div class="conteudo tres-colunas">
-                           <div class="conteudo fonte-5-pontos">NÚMERO</div>
-                           <div class="conteudo fonte-7-pontos">@duplicata.dVenc.Value</div>
-                        </div>
-                        <div class="conteudo tres-colunas">
-                           <div class="conteudo fonte-5-pontos">NÚMERO</div>
-                           <div class="conteudo fonte-7-pontos">@duplicata.vDup.Value</div>
-                        </div>
-                     </td>
+                     foreach (var duplicata in @Model.Header.cobr.dup)
+                     {
+                        <td class="campo sem-bordas">
+                           <div class="conteudo tres-colunas">
+                              <div class="conteudo fonte-5-pontos">NÚMERO</div>
+                              <div class="conteudo fonte-7-pontos">@duplicata.nDup.Value</div>
+                           </div>
+                           <div class="conteudo tres-colunas">
+                              <div class="conteudo fonte-5-pontos">NÚMERO</div>
+                              <div class="conteudo fonte-7-pontos">@duplicata.dVenc.Value</div>
+                           </div>
+                           <div class="conteudo tres-colunas">
+                              <div class="conteudo fonte-5-pontos">NÚMERO</div>
+                              <div class="conteudo fonte-7-pontos">@duplicata.vDup.Value</div>
+                           </div>
+                        </td>
+                     }
                   }
                </tr>
             </table>
