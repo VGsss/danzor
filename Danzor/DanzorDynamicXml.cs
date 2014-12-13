@@ -12,6 +12,13 @@ namespace Danzor
         private XElement element;
         private Dictionary<string, object> dictionary;
 
+        public bool IsNull
+        {
+            get
+            {
+                return element.IsNull();
+            }
+        }
         public string Value
         {
             get
