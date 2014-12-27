@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Danzor.Print;
 
 namespace Danzor.Print
 {
     internal class DanzorPrintManager
     {
-        public static int ITEM_PER_PAGE = 15;
+        public static int MAX_ITEM_PER_PAGE = 20;
+        public static int MIN_ITEM_PER_PAGE = 15;
 
         private dynamic nfe;
         private dynamic protNFe;
@@ -34,10 +32,17 @@ namespace Danzor.Print
 
         private int PageSize()
         {
-            var items = (double)this.nfe.infNFe.det.Count;
-            var pages = Convert.ToInt32(Math.Ceiling(items / ITEM_PER_PAGE));
+            var totalItems = (double)this.nfe.infNFe.det.Count;
 
-            return pages < 1 ? 1 : pages;
+            if (totalItems <= MIN_ITEM_PER_PAGE)
+                return 1;
+            else if (totalItems <= MAX_ITEM_PER_PAGE)
+                return 2;
+            else
+            {
+                var pages = Convert.ToInt32(Math.Ceiling(totalItems / MAX_ITEM_PER_PAGE));
+                return pages < 1 ? 1 : pages;
+            }
         }
     }
 }

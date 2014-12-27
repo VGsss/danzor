@@ -47,7 +47,6 @@
     <Compile Include="Print\DanzorPage.cs" />
     <Compile Include="Print\DanzorPrintManager.cs" />
     <Compile Include="Print\DanzorPrintViewer.cs" />
-    <Compile Include="Extensions\DanzorDynamicXmlExtension.cs" />
     <Compile Include="Extensions\XElementExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
