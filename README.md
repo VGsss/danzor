@@ -1,4 +1,4 @@
-https://travis-ci.org/ycodeteam/danzor.svg
+![alt tag](https://travis-ci.org/ycodeteam/danzor.svg)
 
 Danzor
 ======
