@@ -1,6 +1,4 @@
-![alt tag](https://travis-ci.org/ycodeteam/danzor.svg)
-
-Danzor
+Danzor ![alt tag](https://travis-ci.org/ycodeteam/danzor.svg)
 ======
 Gerador de DANFe para projetos MVC
 
