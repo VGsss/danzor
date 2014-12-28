@@ -1,3 +1,5 @@
+https://travis-ci.org/ycodeteam/danzor.svg
+
 Danzor
 ======
 Gerador de DANFe para projetos MVC
