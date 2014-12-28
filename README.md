@@ -12,10 +12,10 @@ PM> Install-Package Danzor
 ###Utilização
 No seu controller crie uma instância de DanzorPrintViewr passando o path onde está o XML da NFe
 
-```
+```csharp
 public ActionResult Danfe()
 {
-    var model = new DanzorPrintViewer(<<caminho do arquivo>>);
+    var model = new DanzorPrintViewer("<<caminho do arquivo>>");
     return View("~/Views/Danfe/Danfe.cshtml", model);
 }
 ```
