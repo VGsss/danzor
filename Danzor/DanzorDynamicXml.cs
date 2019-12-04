@@ -59,10 +59,7 @@ namespace Danzor
 
         public DanzorDynamicXml First()
         {
-            var node = this.element.Elements().First();
-
-            if (node == null) return null;
-            else return new DanzorDynamicXml(node);
+            return element.HasElements ? new DanzorDynamicXml(element.Elements().First()) : null;
         }
 
         public override bool TryGetMember(GetMemberBinder binder, out object result)
